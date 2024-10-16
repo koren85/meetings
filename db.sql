@@ -1,0 +1,18 @@
+CREATE TABLE protocols (
+  id SERIAL PRIMARY KEY,
+  date DATE NOT NULL,
+  name VARCHAR(255) NOT NULL,
+  number INTEGER NOT NULL,
+  secretary VARCHAR(255) NOT NULL,
+  rows JSONB
+);
+
+CREATE TABLE regions (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE executors (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) UNIQUE NOT NULL
+);
